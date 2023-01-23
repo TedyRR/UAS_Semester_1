@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin - Klinik Kesehatan Gigi Ananda</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css" />
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css" />
+    <style>
+        .blockquote-custom {
+            position: relative;
+            font-size: 1.1rem;
+            border-left: .7rem solid white;
+        }
+
+        .blockquote-custom-icon {
+            width: 350px;
+            height: 50px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -25px;
+
+        }
+
+        .breadcrumb {
+            background-color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center my-4">
+                    Admin - Klinik Kesehatan Gigi Ananda - Depok
+                </h3>
+
+                <div class="row mx-5 my-4">
+                    <div class="col-md-8">
+                        <nav class="nav">
+                            <a class="nav-link text-dark" aria-current="page" href="home.html">Home</a>
+                            <a class="nav-link text-dark" href="layanan.html">Layanan</a>
+                            <a class="nav-link text-dark" href="booking.html">Booking</a>
+                            <a class="nav-link text-dark" href="pagekosong.html">Testimoni</a>
+                            <a class="nav-link text-dark" href="pagekosong.html">Tentang Kami</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-3 text-right">
+                        <input type="text" placeholder="search" class="form-control" autofocus />
+                    </div>
+                    <div class="col-md-1 text-left">
+                        <a href="../backend/dashboard.html">Admin</a>
+                    </div>
+                </div>
+                <div class="row mx-5">
+                    <div class="col-md-12">
+                        <div class="card p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <nav>
+                                        <ol class="breadcrumb float-right">
+                                            <li class="breadcrumb-item">
+                                                <a href="home.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active">
+                                                Booking
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <blockquote class="blockquote blockquote-custom bg-white shadow rounded">
+                                        <div class="blockquote-custom-icon">Booking Periksa Kesehatan Gigi</div>
+                                        <form action="daftar_booking.html" class="p-4" method="post">
+                                            <div class="row mt-3 mb-2">
+                                                <label for="nama_pasien" class="col-sm-2 col-form-label">Nama
+                                                    Pasien</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="nama_pasien">
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="dokter" class="col-sm-2 col-form-label">Pilih
+                                                    Dokter</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control form-select" id="dokter">
+                                                        <option value="1">Drg Amel</option>
+                                                        <option value="2">Drg Lulu Bintang</option>
+                                                        <option value="3">Drg Indra Budi</option>
+                                                        <option value="3">Drg Putri Anisa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="" class="col-sm-2 col-form-label">Pembayaran</label>
+
+                                                <div class="form-check mx-2">
+                                                    <input class="form-check-input" type="checkbox" value="cash"
+                                                        id="cash">
+                                                    <label class="form-check-label" for="cash">
+                                                        Cash
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="transfer"
+                                                        id="transfer">
+                                                    <label class="form-check-label" for="transfer">
+                                                        Transfer
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mx-2">
+                                                    <input class="form-check-input" type="checkbox" value="eWallet"
+                                                        id="eWallet">
+                                                    <label class="form-check-label" for="eWallet">
+                                                        eWallet
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="layanan" class="col-sm-2 col-form-label">Pilih
+                                                    Layanan</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control form-select" id="layanan">
+                                                        <option value="1">Perawatan Gigi Anak</option>
+                                                        <option value="2">Perawatan Gigi Lansia</option>
+                                                        <option value="3">Perawatan Gigi Bayi</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal
+                                                    Periksa</label>
+                                                <div class="col-sm-10">
+                                                    <input type="date" class="form-control" id="tanggal">
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+                                                <div class="col-sm-10">
+                                                    <input type="number" class="form-control" id="umur">
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="noTelepon" class="col-sm-2 col-form-label">Telpon/Hp</label>
+                                                <div class="col-sm-10">
+                                                    <input type="number" class="form-control" id="noTelepon">
+                                                </div>
+                                            </div>
+                                            <div class="mb-2 row">
+                                                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                            </div>
+                                            <div class="d-grid gap-3 d-md-block my-3">
+                                                <a class="btn btn-primary mx-4 btn-sm" href="daftar_booking.html"
+                                                    role="button">Submit</a>
+                                                <!-- <button class="btn btn-primary mx-3 " type="submit">Submit</button> -->
+                                                <button class="btn btn-primary btn-sm" type="reset">Reset</button>
+                                            </div>
+                                        </form>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer my-4 ml-5">
+        <span class="text-muted p-3">Develop By Mahasiswa STT-NF &copy; 2023</span>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../../plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../../plugins/moment/moment.min.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="../../dist/js/pages/dashboard.js"></script>
+</body>
+
+</html>
